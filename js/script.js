@@ -13,7 +13,11 @@ window.addEventListener("load", function () {
     loader.className += " hidden";
 });
 
-// 3-videoplay
+/* closemenu */
+var closebtns = document.getElementsByClassName("close");
+
+
+// // 3-videoplay
 setTimeout(function(){
     document.getElementById("myVid").play();
   }, 5000)
@@ -23,6 +27,8 @@ setTimeout(function(){
       }, 5000)
 
 // // 4-musicplayer
+
+
 function clickToPlay() {
 var myAudio = document.getElementById("myaudio");
 $(myAudio)[0].play();
@@ -35,7 +41,6 @@ function clickToPause() {
   $("#pausebutton").hide();
   $("#playbutton").fadeIn();
 }
-
 // 5-textflyin
 $(function() {
 
@@ -44,8 +49,8 @@ $('.fly-in-text').removeClass('hidden');
 }, 500);
            })();
 
-//  $('#videoLink')
-// .magnificPopup({
-//   type:'inline',
-//   midClick: true
-//              })
+ $('#videoLink')
+.magnificPopup({
+  type:'inline',
+  midClick: true
+             })

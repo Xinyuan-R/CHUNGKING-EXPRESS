@@ -22,7 +22,7 @@
   width: 60px;
   height: 60px;
   padding: 1rem; */
-  /* background-color: rgba(239,219,203); */
+  
   display: flex;
   align-items:center;
   justify-content:center;
@@ -126,4 +126,4 @@
   color: white;
   text-decoration: none;
   transition: color 0.4s ease-in;
-} 
+}

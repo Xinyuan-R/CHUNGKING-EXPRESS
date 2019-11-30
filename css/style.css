@@ -97,6 +97,8 @@ body {
         width: 100%;
         }
       }
+
+
 /* video */
 .video-wrapper video {
   position: absolute;
@@ -107,7 +109,6 @@ body {
   height: 101%;
 
 }
-
 
 /* neon-text */
     @font-face {
@@ -193,8 +194,6 @@ z-index: 2;
       z-index: 99;
   }
 
-
-
    .fly-in-text li {
       display: inline-block;
       letter-spacing: 3px;
@@ -238,7 +237,8 @@ section#split {
   height: 100vh;
   display: flex;
   z-index: 0;
-  bottom: -1000px;
+  bottom: -1500px;
+  /* ??? */
 }
 section .screen {
   position: relative;
