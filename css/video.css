@@ -1,0 +1,263 @@
+/* body {
+  color: white;
+  background-color: black;
+  font-size: 1.6em;
+
+  font-family: 'Lato', sans-serif;
+} */
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin:0;
+ padding:0;
+ /* font-family: 'Lato', sans-serif; */
+}
+@font-face {
+font-family: cyber;
+src: url(font/Browser-Cyberlink-New.ttf);
+}
+
+body {
+ overflow: hidden;
+ background-color: black;
+ font-family: cyber;
+color: white;
+}
+
+#images {
+  background-size: cover;
+  background-position: center;
+}
+
+
+#menuToggle
+{
+  font-family: cyber;
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: white;
+  opacity: 0.1;
+}
+
+#menuToggle a:hover
+{
+  transition:  0.3s ease;
+  color: tomato;
+  text-shadow: 0 0 0px #A4FE6C, 0 0 5px #95E662, 0 0 30px #95251D, 0 0 40px #95251D, 0 0 70px #456A2D, 0 0 80px #2C441D, 0 0 100px #192711;
+  opacity: 1;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #73E7B5;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  font-family: cyber;
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: rgba(65 138 116 0);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+z-index: -1;
+}
+.over {
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+font-family: 'Lato', sans-serif;
+}
+#text {
+  line-height: 30px;
+  margin-bottom: 10%;
+  font-size: 1rem;
+}
+/* #buttonBox {
+  text-align:center;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 8;
+
+} */
+button{
+  /* margin: 2px; */
+
+  display: block;
+  margin: auto;
+  padding: 0.5rem 0.75rem;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-shadow:
+    -2px 4px 4px #091243,
+    0 0 10px #00D0FF,
+    inset 1px 1px 1px white;
+  color: #1FFFFF;
+  border: 0px ;
+  background-color: transparent;
+  animation: flickering 5s infinite;
+}
+/* button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 0.3em;
+  width: 100%;
+  border-bottom: 1px solid;
+  opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: scale(0,1);
+} */
+/* button:hover:after {
+  opacity: 1;
+
+ transform: scale(1);
+} */
+button:hover {
+  background-color: #30FFD5;
+  color:white;
+}
+
+
+@keyframes flickering {
+  0% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+
+  2% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+
+  4% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+
+  8% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+
+  28% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+
+  30% {
+    border-color: transparent;
+    opacity: 0.2;
+  }
+
+  36% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+
+  100% {
+    border-color: #1FFFFF;
+    opacity: 1;
+  }
+}
+}

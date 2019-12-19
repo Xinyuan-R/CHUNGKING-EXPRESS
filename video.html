@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Adventure Game Template</title>
+  <link rel="stylesheet" href="css/video.css">
+
+</head>
+<body>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+
+<div class="Audio">
+  <img src="img/pause.png" id="pausebutton"  style="width:20px;height:20px;position:fixed;;left: 20px;bottom:20px;z-index:99;" onclick="clickToPause();">
+   <img src="img/play.png" id="playbutton" style="width:20px;height:20px;position:fixed;left: 20px;bottom:20px;z-index:99;display:none" onclick="clickToPlay();">
+  <audio  id="myaudio" loop autoplay>
+    <source src="media/2.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="index.html#myVid"><li>Home</li></a>
+      <a href="index.html#split"><li>Menu</li></a>
+      <a href="video.html"><li>Can</li></a>
+      <a href="plane.html"><li>Flight</li></a>
+    </ul>
+  </div>
+</nav>
+
+<video id="images"  autoplay>
+</video>
+<div class="over">
+
+<div id="text">
+</div>
+<input id="input" onkeypress="submitDogName(this)" placeholder='Type Your Dogs Name and Enter to Begin' style="display:none;">
+<div id="buttonBox">
+</div>
+</div>
+
+
+
+
+  <script  src="js/video.js"></script>
+
+</body>
+</html>
