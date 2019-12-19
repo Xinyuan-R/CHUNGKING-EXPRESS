@@ -13,22 +13,13 @@ window.addEventListener("load", function () {
     loader.className += " hidden";
 });
 
-/* closemenu */
-var closebtns = document.getElementsByClassName("close");
-
-
 // // 3-videoplay
 setTimeout(function(){
     document.getElementById("myVid").play();
-  }, 5000)
+  }, 100)
 
-      setTimeout(function(){
-          document.getElementsByClassName("neon-wrapper").fadeIn();
-      }, 5000)
 
 // // 4-musicplayer
-
-
 function clickToPlay() {
 var myAudio = document.getElementById("myaudio");
 $(myAudio)[0].play();
@@ -41,16 +32,15 @@ function clickToPause() {
   $("#pausebutton").hide();
   $("#playbutton").fadeIn();
 }
+
+// neontext
+setTimeout(function(){
+    $(".neon-wrapper").fadeIn();
+}, 9000)
+
 // 5-textflyin
 $(function() {
-
 setTimeout(function() {
 $('.fly-in-text').removeClass('hidden');
 }, 500);
-           })();
-
- $('#videoLink')
-.magnificPopup({
-  type:'inline',
-  midClick: true
-             })
+           });

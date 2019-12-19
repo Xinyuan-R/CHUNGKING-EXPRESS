@@ -9,66 +9,48 @@
 
   <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
   <link href="css/style.css"  rel="stylesheet">
-  <link href="css/menu.css"  rel="stylesheet">
+  <!-- <link href="css/menu.css"  rel="stylesheet"> -->
   <title>Chungking Express</title>
   </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/seethru@4/dist/seeThru.min.js"></script>
+
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script defer src="js/game.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/mainscript.js"></script>
 
-<video src="person.mp4" id="my-video" autoplay poster="">
-
-</video>
 
 <!-- 1-preloadinggif -->
   <div class="loader" >
     <img src="img/city-1.gif" alt="loading" onload="myFunction()" >
-  </div> -->
+  </div>
   <!--2- progressbar -->
    <div class="progress-bar-container fadeOut">
 <div class="progress-bar">
   <span style= "width:100%"></span>
 </div>
 </div>
-<!-- 3-navbar -->
-<div id="Home">
-<div class="menu-wrap" >
-  <input type="checkbox" class="toggler">
-  <div class="hamburger">
-  <div >
-  </div>
-  </div>
-  <div class="menu close">
-    <div >
-    <div>
-    <ul>
-  <li><a href="#myVid">Home</a></li>
-  <li><a href="#split">Menu</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- 4-video -->
 
+<!-- 4-navbar -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="#myVid"><li>Home</li></a>
+      <a href="#split"><li>Menu</li></a>
+      <a href="#"><li>Flight</li></a>
+      <a href="plane.html"><li>Can</li></a>
+    </ul>
+  </div>
+</nav>
+
+<!-- 5-video -->
   <div class="video-wrapper" style="z-index:0" >
-    <video id="myVid" src="v.mp4" loop muted poster="" > </video> </div>
-
-<!-- 5-neontext -->
-<div class="neon-wrapper" >
-  <div class="neon-wrapper-border"  >
-  <div class="neon-text" > <a href="#split">Chungking
-<br>Express </a>
-
-  </div>
-  </div>
-  </div>
+    <video id="myVid" src="v.mp4"  muted poster="" > </video> </div>
 
  <!-- 6-music -->
 <div class="Audio">
-
   <img src="img/pause.png" id="pausebutton"  style="width:20px;height:20px;position:fixed;;left: 20px;bottom:20px;z-index:99;" onclick="clickToPause();">
    <img src="img/play.png" id="playbutton" style="width:20px;height:20px;position:fixed;left: 20px;bottom:20px;z-index:99;display:none" onclick="clickToPlay();">
   <audio  id="myaudio" autoplay >
@@ -76,7 +58,16 @@
   </audio>
 </div>
 </div>
-<!-- 7-menu -->
+
+<!-- 7-neontext -->
+<div class="neon-wrapper" >
+  <div class="neon-text" > <a href="#split">Chungking
+<br>Express </a>
+
+  </div>
+
+  </div>
+<!-- 8-menu -->
 
 <section class="split" id="split" style="z-index:0">
   <div class="screen">
@@ -110,7 +101,7 @@
         <div class="content" >
           <div class="imgBx">
             <img src="img/skyline neon.png"  >
-            <p style="color:white;">"Any canned pineapple that expires on May 1?"</p>
+            <p style="color:white;position:relative;top:130px;">"Any canned pineapple that expires on May 1?"</p>
           </div>
         </div>
       </div>
@@ -127,7 +118,7 @@
          <li>H</li>
          <li>T</li>
          <br><br>
-         <div class="red">
+         <div >
          <li style="color:red;" >E</li>
          <li style="color:red;">X</li>
          <li style="color:red;">P</li>
@@ -143,14 +134,15 @@
         <div class="imgBx">
           <img src="img/foodstand neon.png" >
           </div>
-          <a href="https://www.youtube.com/watch?v=trcib2lrsko" class="button more" id="videoLink"><img src="img/neon-plane.png" style="z-index:200;max-width:90px;position:relative;top:20px;left:50px;"></a>
-          <!-- <div id="videoStory" class="mfp-hide" style="max-width: 75%; margin: 0 auto;">
- <iframe width="853" height="480" src="https://www.youtube.com/embed/oXoe3GWygq0?rel=0" frameborder="0" allowfullscreen></iframe>
-</div> -->
+          <a href="plane.html" class="buttonmore">
+              <img src="img/neon-plane.png" style="z-index:200;max-width:90px;position:relative;top:20px;left:50px;">
+          </a>
+
+
           <div class="content">
             <div class="imgBx">
               <img src="img/foodstand neon.png" style="position:relative;left:100px;top:-50px;" >
-              <p style="color:white;position:relative;left:100px;top:-50px;">"Change of flight. Your place cancelled."</p>
+              <p style="color:white;position:relative;left:100px;top:60px;">"Change of flight. Your place cancelled."</p>
             </div>
           </div>
         </div>
@@ -159,19 +151,6 @@
 </section >
 </div>
 
-<!-- 8-videoplay -->
-
-<!-- 8-game -->
-
-<!-- <div class="container">
-  <div id="text">Text</div>
-  <div id="option-buttons" class="btn-grid">
-    <button class="btn">Option 1</button>
-    <button class="btn">Option 2</button>
-    <button class="btn">Option 3</button>
-    <button class="btn">Option 4</button>
-  </div>
-</div> -->
 
 </div>
 
