@@ -16,21 +16,13 @@ function clickToPause() {
 var images = document.getElementById("images");
 var text = document.getElementById("text");
 var buttonBox = document.getElementById('buttonBox');
-var input = document.getElementById('input');
 var yerdog;
 
-input.onkeypress = function(event) {
-  if (event.key == "Enter" || event.keyCode == 13) {
-    yerdog =  input.value;
-    input.parentNode.removeChild(input)
-    advanceTo(scenario.two)
-  }
-};
 
 
 var changeText = function(words) {
-  // text.innerHTML = words.replace("Your dog", yerdog);
-  text.innerHTML = words.replace("Your dog", yerdog);
+
+text.innerHTML = words.replace();
 };
 
 var changeImage = function(img) {
@@ -75,7 +67,6 @@ var scenario = {
   },
  four: {
    image: "media/S4.mp4",
-   image: "https://s9.postimg.org/9p8m7v1u7/6899639786_d517c4cce3_z.jpg",
    text: "Of course You  will dispose of all of them, when you are off duty. Now you are on the street chasing a suspect. Wednesday. Crowd street as usual.You bump into someone.Blonde wig, Black sunglasses. A woman in tangerine raincoat.That was the closest you and her ever got. Just 0.01 cm, if you recalled later. ",
    buttons: [["Thank god you did not miss  plain beginning of this story.", "advanceTo(scenario.five)"]]
   },

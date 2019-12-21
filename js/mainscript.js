@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 // // 3-videoplay
 setTimeout(function(){
     document.getElementById("myVid").play();
-  }, 100)
+  }, 200)
 
 
 // // 4-musicplayer

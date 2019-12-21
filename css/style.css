@@ -26,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeOut 2s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .loader > img {

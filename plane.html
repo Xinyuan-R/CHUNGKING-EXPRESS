@@ -19,7 +19,6 @@
           <section class="rain"></section>
           </div>
 
-
         <div class="warpper">
                 <div class="red-block">
                     <div class="block"></div>
@@ -38,14 +37,6 @@
 
         </div>
 
-        <div class="Audio">
-          <img src="img/pause.png" id="pausebutton"  style="width:20px;height:20px;position:fixed;left:20px;bottom:10px;z-index:99;" onclick="clickToPause();">
-           <img src="img/play.png" id="playbutton" style="width:20px;height:20px;position:fixed;left:20px;bottom:10px;z-index:1;display:none" onclick="clickToPlay();">
-          <audio  id="myaudio" autoplay>
-            <source src="media/2.mp3" type="audio/mp3">
-          </audio>
-        </div>
-
 
         <nav role="navigation">
           <div id="menuToggle">
@@ -56,11 +47,20 @@
             <ul id="menu">
               <a href="index.html"><li>Home</li></a>
               <a href="index.html#split"><li>Menu</li></a>
-              <a href="#"><li>Flight</li></a>
+              <a href="video.html"><li>Flight</li></a>
               <a href="plane.html"><li>Can</li></a>
             </ul>
           </div>
         </nav>
+
+        <div class="Audio">
+          <img src="img/pause.png" id="pausebutton"  style="width:20px;height:20px;position:relative;left:20px;bottom:20px;z-index:1;" onclick="clickToPause();">
+           <img src="img/play.png" id="playbutton" style="width:20px;height:20px;position:relative;left:20px;bottom:20px;z-index:1;display:none" onclick="clickToPlay();">
+          <audio  id="myaudio" autoplay>
+            <source src="media/2.mp3" type="audio/mp3">
+          </audio>
+        </div>
+
 
         <div class="city">
             <div class="title">
@@ -100,7 +100,6 @@
     var Oicon = document.getElementsByClassName('icon')[0]
     var Oimg = document.getElementsByTagName('img')[0]
     var vid = document.getElementById('v0')
-    // var clone = document.getElementsByClassName('clone')[0]
     var video = document.getElementById('vio')
     Obox.onclick = function(){
     move()
@@ -135,7 +134,7 @@
        setTimeout(function(){
             Omask.style.display = 'block'
             var frameNumber = 0,
-            playbackConst = 500,
+            playbackConst = 600,
             setHeight = document.getElementById("set-height"),
             setmask = document.getElementsByClassName("mask")[0]
             vid = document.getElementById('v0');
@@ -164,15 +163,13 @@
 
 <script>
 
-// number of drops created.
-var nbDrop = 50;
 
-// function to generate a random number range.
+var nbDrop = 50;
 function randRange( minNum, maxNum) {
   return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
 }
 
-// function to generate drops
+
 function createRain() {
 
 for( i=1;i<nbDrop;i++) {
@@ -185,7 +182,7 @@ $('#drop'+i).css('top',dropTop);
 }
 
 }
-// Make it rain
+
 createRain();
 
 //music
